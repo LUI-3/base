@@ -1,0 +1,340 @@
+// LUI2
+// GRID - MIXINS
+
+
+.lui.grid {
+	.container {
+		.this(@width:@lui_container_xs_width,@padding:@lui_container_padding){
+			.lui.box-sizing.border-box();
+			width: @width;
+			margin-left: auto;
+			margin-right: auto;
+			padding-left: @padding;
+			padding-right: @padding;
+
+			& when (@grid_sm_enable = true){
+				@media (min-width:@grid_sm_start){
+					width: @lui_container_sm_width;
+				}
+			}
+
+			& when (@grid_md_enable = true){
+				@media (min-width:@grid_md_start){
+					width: @lui_container_md_width;
+				}
+			}
+
+			& when (@grid_lg_enable = true){
+				@media (min-width:@grid_lg_start){
+					width: @lui_container_lg_width;
+				}
+			}
+
+			& when (@grid_xl_enable = true){
+				@media (min-width:@grid_xl_start){
+					width: @lui_container_xl_width;
+				}
+			}
+
+			& when (@grid_xxl_enable = true){
+				@media (min-width:@grid_xxl_start){
+					width: @lui_container_xxl_width;
+				}
+			}
+
+			& when (@grid_xxxl_enable = true){
+				@media (min-width:@grid_xxxl_start){
+					width: @lui_container_xxxl_width;
+				}
+			}
+		}
+
+		// FLUID CONTAINER
+		.fluid(){
+			width: 100%;
+		}
+
+		// REMOVE PADDING
+		.nospace(){
+			.container.this(@lui_container_xs_width, 0);
+		}
+
+		// CUSTOM MAXIMUM WIDTH
+		.max(@width){
+			max-width: @width;
+		}
+
+		// LUI BREAKPOINTS
+		.max-xs() when (@grid_xs_enable = true){
+			max-width: @lui_container_xs_width;
+		}
+		.max-sm() when (@grid_sm_enable = true){
+			max-width: @lui_container_sm_width;
+		}
+		.max-md() when (@grid_md_enable = true){
+			max-width: @lui_container_md_width;
+		}
+		.max-lg() when (@grid_lg_enable = true){
+			max-width: @lui_container_lg_width;
+		}
+		.max-xl() when (@grid_xl_enable = true){
+			max-width: @lui_container_xl_width;
+		}
+		.max-xxl() when (@grid_xxl_enable = true){
+			max-width: @lui_container_xxl_width;
+		}
+		.max-xxxl() when (@grid_xxxl_enable = true){
+			max-width: @lui_container_xxxl_width;
+		}
+		.print() when (@grid_print_enable = true){
+			width: 100%;
+			max-width: 100%;
+		}
+	}
+
+	.row {
+		.this(){
+			.lui.box-sizing.border-box();
+			.lui.flexbox.block();
+			.lui.flexbox.flex-direction(row);
+			.lui.flexbox.flex-wrap(wrap);
+
+			margin: 0 @lui_row_margin;
+		}
+
+		.va {
+			.top(){
+				.lui.flexbox.align-content(flex-start);
+				.lui.flexbox.align-items(flex-start);
+			}
+			.center(){
+				.lui.flexbox.align-content(center);
+				.lui.flexbox.align-items(center);
+			}
+			.bottom(){
+				.lui.flexbox.align-content(flex-end);
+				.lui.flexbox.align-items(flex-end);
+			}
+		}
+
+		.a {
+			.left(){
+				.lui.flexbox.justify-content(flex-start);
+				.lui.flexbox.align-content(flex-start);
+			}
+
+			.center(){
+				.lui.flexbox.justify-content(center);
+				.lui.flexbox.align-content(flex-start);
+			}
+
+			.right(){
+				.lui.flexbox.justify-content(flex-end);
+				.lui.flexbox.align-content(flex-start);
+			}
+		}
+
+		.space {
+			.between(){
+				.lui.flexbox.justify-content(space-between);
+			}
+
+			.stretch(){
+				.lui.flexbox.items.align(stretch);
+			}
+		}
+	}
+
+	.column {
+		.this(){
+			display: block;
+			.lui.box-sizing.border-box();
+			padding-left: @lui_col_padding;
+			padding-right: @lui_col_padding;
+		}
+
+		// DEBUG INFO (EXPERIMENTAL)
+		// shows actual column-size
+		// WARNING: debug mode can break your website layout
+		.debug(@size:notset) when (@lui_debug = true){
+			&:before {
+				display: block;
+				font-family: Arial, Helvetica, sans-serif;
+				font-size: 11px;
+				font-weight: bold;
+				color: red;
+				content: @size;
+			}
+		}
+
+		.hidden(){
+			display: none;
+		}
+
+		// DEFAULT GRID COLUMN SIZES
+		.width-1(@name:notset){
+			display: block;
+			width: @lui_col_1_width;
+			.column.debug(@name);
+		}
+
+		.width-2(@name:notset){
+			display: block;
+			width: @lui_col_2_width;
+			.column.debug(@name);
+		}
+
+		.width-3(@name:notset){
+			display: block;
+			width: @lui_col_3_width;
+			.column.debug(@name);
+		}
+
+		.width-4(@name:notset){
+			display: block;
+			width: @lui_col_4_width;
+			.column.debug(@name);
+		}
+
+		.width-5(@name:notset){
+			display: block;
+			width: @lui_col_5_width;
+			.column.debug(@name);
+		}
+
+		.width-6(@name:notset){
+			display: block;
+			width: @lui_col_6_width;
+			.column.debug(@name);
+		}
+
+		.width-7(@name:notset){
+			display: block;
+			width: @lui_col_7_width;
+			.column.debug(@name);
+		}
+
+		.width-8(@name:notset){
+			display: block;
+			width: @lui_col_8_width;
+			.column.debug(@name);
+		}
+
+		.width-9(@name:notset){
+			display: block;
+			width: @lui_col_9_width;
+			.column.debug(@name);
+		}
+
+		.width-10(@name:notset){
+			display: block;
+			width: @lui_col_10_width;
+			.column.debug(@name);
+		}
+
+		.width-11(@name:notset){
+			display: block;
+			width: @lui_col_11_width;
+			.column.debug(@name);
+		}
+
+		.width-12(@name:notset){
+			display: block;
+			width: @lui_col_12_width;
+			.column.debug(@name);
+		}
+
+		// EXTRA GRID COLUMN SIZES
+		.width-10p(@name:notset){
+			display: block;
+			width: 10%;
+			.column.debug(@name);
+		}
+
+		.width-20p(@name:notset){
+			display: block;
+			width: 20%;
+			.column.debug(@name);
+		}
+
+		.width-30p(@name:notset){
+			display: block;
+			width: 30%;
+			.column.debug(@name);
+		}
+
+		.width-40p(@name:notset){
+			display: block;
+			width: 40%;
+			.column.debug(@name);
+		}
+
+		.width-50p(@name:notset){
+			display: block;
+			width: 50%;
+			.column.debug(@name);
+		}
+
+		.width-60p(@name:notset){
+			display: block;
+			width: 60%;
+			.column.debug(@name);
+		}
+
+		.width-70p(@name:notset){
+			display: block;
+			width: 70%;
+			.column.debug(@name);
+		}
+
+		.width-80p(@name:notset){
+			display: block;
+			width: 80%;
+			.column.debug(@name);
+		}
+
+		.width-90p(@name:notset){
+			display: block;
+			width: 90%;
+			.column.debug(@name);
+		}
+
+		.width-100p(@name:notset){
+			display: block;
+			width: 100%;
+			.column.debug(@name);
+		}
+
+		// nth sizes
+		.width-5th(@name:notset){
+			display: block;
+			width: 20%;
+			.column.debug(@name);
+		}
+		.width-7th(@name:notset){
+			display: block;
+			width: 14.28%;
+			.column.debug(@name);
+		}
+		.width-8th(@name:notset){
+			display: block;
+			width: 12.5%;
+			.column.debug(@name);
+		}
+		.width-9th(@name:notset){
+			display: block;
+			width: 11.1%;
+			.column.debug(@name);
+		}
+		.width-10th(@name:notset){
+			display: block;
+			width: 10%;
+			.column.debug(@name);
+		}
+		.width-11th(@name:notset){
+			display: block;
+			width: 9.09%;
+			.column.debug(@name);
+		}
+	}
+}

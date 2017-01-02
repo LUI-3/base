@@ -1,0 +1,26 @@
+//
+// CLEAR
+//
+
+.lui.clear {
+	.this(){
+		display: block;
+		clear: both;
+	}
+
+	.after {
+		&:after {
+			display: block;
+			clear: both;
+			content: "";
+		}
+	}
+
+	.before {
+		&:before {
+			display: block;
+			clear: both;
+			content: "";
+		}
+	}
+}

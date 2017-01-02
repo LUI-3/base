@@ -1,0 +1,103 @@
+// LUI2
+// GRID - CONFIG
+
+
+// ENABLE/DISABLE
+@lui_component_grid:		true;
+
+
+// BREAKPOINTS AND SIZES
+@grid_xs_enable:			true;
+// there is no starting point, XS should be always smalles = 0px and up
+@grid_xs_end:				500px;
+@lui_container_xs_width:	100%;
+
+@grid_sm_enable:			true;
+@grid_sm_start:				501px;
+@grid_sm_end:				767px;
+@lui_container_sm_width:	470px;
+
+@grid_md_enable:			true;
+@grid_md_start:				768px;
+@grid_md_end:				991px;
+@lui_container_md_width:	735px;
+
+@grid_lg_enable:			true;
+@grid_lg_start:				992px;
+@grid_lg_end:				1199px;
+@lui_container_lg_width:	970px;
+
+@grid_xl_enable:			true;
+@grid_xl_start:				1200px;
+@grid_xl_end:				1499px;
+@lui_container_xl_width:	1150px;
+
+@grid_xxl_enable:			true;
+@grid_xxl_start:			1500px;
+@grid_xxl_end:				1999px;
+@lui_container_xxl_width:	1450px;
+
+@grid_xxxl_enable:			true;
+@grid_xxxl_start:			2000px;
+// there is no ending point, if you want to use more breakpoints, you can add 2k ending point
+@lui_container_xxxl_width:	1950px;
+
+@grid_print_enable:			true;
+
+
+// HORIZONTAL SPACING
+@lui_container_padding:		 15px; // DON'T USE PERCENTAGE VALUE
+@lui_row_margin:			-15px; // DON'T USE PERCENTAGE VALUE
+@lui_col_padding:			 15px; // DON'T USE PERCENTAGE VALUE
+
+// per breakpoint padding does not remove default 15px paddings
+// it can be used to remove or add various paddings on each breakpoint
+// if you define for example .pv-xs-0 (padding vertical on XS = 0px) you'll have to reset it on larger
+// same like other grid stuff, it's "mobile first" (min-width:XYZ and up)
+// IF YOU DONT WANT TO USE THIS FEATURE, YOU CAN TURN IT OFF TO SAVE SOME CSS
+@lui_col_padding_per_breakpoint: true;
+
+
+// DIMENSIONS
+@lui_col_1_width:	8.333%;
+@lui_col_2_width:	16.666%;
+@lui_col_3_width:	25%;
+@lui_col_4_width:	33.333%;
+@lui_col_5_width:	41.666%;
+@lui_col_6_width:	50%;
+@lui_col_7_width:	58.33%;
+@lui_col_8_width:	66.66%;
+@lui_col_9_width:	75%;
+@lui_col_10_width:	83.33%;
+@lui_col_11_width:	91.66%;
+@lui_col_12_width:	100%;
+
+
+// MARGIN LEFT FOR SPACE BETWEEN COLS
+@lui_ml_1_width:	8.333%;
+@lui_ml_2_width:	16.666%;
+@lui_ml_3_width:	25%;
+@lui_ml_4_width:	33.333%;
+@lui_ml_5_width:	41.666%;
+@lui_ml_6_width:	50%;
+@lui_ml_7_width:	58.33%;
+@lui_ml_8_width:	66.66%;
+@lui_ml_9_width:	75%;
+@lui_ml_10_width:	83.33%;
+@lui_ml_11_width:	91.66%;
+@lui_ml_12_width:	100%;
+
+
+// MARGIN RIGHT FOR SPACE BETWEEN COLS
+@lui_mr_1_width:	8.333%;
+@lui_mr_2_width:	16.666%;
+@lui_mr_3_width:	25%;
+@lui_mr_4_width:	33.333%;
+@lui_mr_5_width:	41.666%;
+@lui_mr_6_width:	50%;
+@lui_mr_7_width:	58.33%;
+@lui_mr_8_width:	66.66%;
+@lui_mr_9_width:	75%;
+@lui_mr_10_width:	83.33%;
+@lui_mr_11_width:	91.66%;
+@lui_mr_12_width:	100%;

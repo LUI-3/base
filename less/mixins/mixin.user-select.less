@@ -1,0 +1,35 @@
+//
+// USER SELECT
+//
+
+.lui.user-select {
+	.this(@args){
+		// credit @Blowsie: http://stackoverflow.com/a/4407335
+		-webkit-touch-callout: @args; // iOS Safari
+		-webkit-user-select: @args; // Chrome/Safari/Opera
+		-khtml-user-select: @args; // Konqueror 
+		-moz-user-select: @args; // Firefox
+		-ms-user-select: @args; // Internet Explorer/Edge
+		user-select: @args; // native support
+	}
+
+	.none(){
+		.this(none);
+	}
+
+	.disable(){
+		.none();
+	}
+
+	.text(){
+		.this(text);
+	}
+
+	.all(){
+		.this(all);
+	}
+
+	.contain(){
+		.this(contain);
+	}
+}
