@@ -4,7 +4,7 @@
   "authors": [
     "wufiii@gmail.com"
   ],
-  "description": "Responsive front-end website framework - Base Package",
+  "description": "Responsive front-end website framework - Base component",
   "main": "less/router.less",
   "keywords": [
     "responsive",
