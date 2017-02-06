@@ -6,6 +6,12 @@
 // INCLUDES ALL LUI FILES
 
 
+// DEBUG - COMPONENT LOAD INFO
+.lui_modules_loaded when (@lui_debug = true){
+	lui_base: true;
+}
+
+
 //
 // ----- MAIN CONFIGURATION -----
 //
@@ -65,3 +71,9 @@
 
 // PHONE NAVBAR
 @import (optional) "../../LUI-3_phone-navbar/less/phone-navbar.router.less";
+
+
+// DEBUG MODE - LOADED COMPONENTS
+html when (@lui_debug = true) {
+	.lui_modules_loaded;
+}

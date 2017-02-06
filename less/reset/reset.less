@@ -4,8 +4,15 @@
 // ----
 // CSS RESET
 
+// DEBUG - COMPONENT LOAD INFO
+.lui_modules_loaded when (@lui_debug = true){
+	& when (@lui_css_reset = true){
+		lui_reset: true;
+	}
+}
 
 & when (@lui_css_reset = true){
+
 	* {
 		.lui.box-sizing.border-box();
 		margin: 0;
