@@ -1,4 +1,4 @@
-[![GitHub license](http://content.github.lui-3.cz/LUI-3_logo-small.png)](//lui-3.cz/)
+[![LUI-3 logo](http://content.github.lui-3.cz/LUI-3_logo-small.png)](//lui-3.cz/)
 # Base
 
 This repository contains base components of LUI-3 framework. This component is needed for all other LUI-3 components as it contains master configuration file, flexbox grid system and collection of mixins
