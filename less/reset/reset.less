@@ -80,6 +80,16 @@
 		}
 	}
 
+	// USE WHATEVER FONT YOU HAVE DEFINED ON BODY FOR ALL INPUTS/BUTTONS/..
+	button,
+	input,
+	textarea,
+	select {
+		& when (@lui_css_reset_inputs_font_inherit = true){
+			font-family: inherit;
+		}
+	}
+
 	// NO SCROLLBAR IN IE/EDGE
 	textarea when (@lui_css_reset_textarea_msfix = true){
 		overflow: auto;
