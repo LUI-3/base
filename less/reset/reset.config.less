@@ -1,0 +1,59 @@
+// LUI-3 FRAMEWORK
+// github.com/LUI-3
+// originally created by Jiří Bělský (github.com/wUFr)
+// ----
+// CSS RESET CONFIGURATION
+
+
+// BASIC CSS RESET
+// turning off default css reset can break styles for some components
+@lui_css_reset: true;
+
+
+// SET EVERYTHING as "border-box"
+// if you set width to 100px then add 10px padding, element will still be 100px wide
+// with this turned on
+// RECOMMENDED NOT TO TURN OFF, EVER, SRSLY BRO
+@lui_css_reset_box-sizing: true;
+
+
+// SET ALL MARGINS TO 0
+// RECOMMENDED NOT TO TURN OFF
+@lui_css_reset_margin: true;
+
+
+// SET ALL PADDINGS TO 0
+// RECOMMENDED NOT TO TURN OFF
+@lui_css_reset_padding: true;
+
+
+// TEXT SIZE ADJUSTING
+// some mobile devices are changing texts size to larger with this turned off
+@lui_css_reset_text-adjust: true;
+@lui_css_reset_text-adjust_size: 100%;
+
+
+// SETS DISPLAY OF ALL NEW HTML5 ELEMENTS TO "BLOCK"
+// fallback for old crappy browsers
+@lui_css_reset_html5_elements_fallback: true;
+
+
+// DEFAULT "A" ELEMENT STYLES
+// some basic styles for hyperlinks
+@lui_css_reset_hyperlink: true;
+
+
+// TEXTAREA - SCROLLBAR FIX FOR IE/EDGE
+// with this turned off, IE/EDGE will show scrollbars even for
+// textareas, that dont need scrolling
+@lui_css_reset_textarea_msfix: true;
+
+
+// INPUT AND TEXTAREA PLACEHOLDER COLOR
+// set default color of placeholder text
+@lui_css_reset_placeholder: true;
+@lui_css_reset_placeholder_color: gray;
+
+// COLOR ON FOCUS
+@lui_css_reset_placeholder_focus: true;
+@lui_css_reset_placeholder_focus_color: #c7c7c7;

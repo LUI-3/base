@@ -13,14 +13,23 @@
 
 & when (@lui_css_reset = true){
 
-	body {
-		-webkit-text-size-adjust: 100%;
+	body when (@lui_css_reset_text-adjust = true){
+		-webkit-text-size-adjust: @lui_css_reset_text-adjust_size;
 	}
 
+	// EVERYTHING
 	* {
-		.lui.box-sizing.border-box();
-		margin: 0;
-		padding: 0;
+		& when (@lui_css_reset_box-sizing = true){
+			.lui.box-sizing.border-box();
+		}
+
+		& when (@lui_css_reset_margin = true){
+			margin: 0;
+		}
+
+		& when (@lui_css_reset_padding = true){
+			padding: 0;
+		}
 	}
 
 	// HTML 5 Elements
@@ -36,19 +45,23 @@
 	section,
 	summary,
 	img {
-		display: block;
+		& when (@lui_css_reset_html5_elements_fallback = true){
+			display: block;
+		}
 	}
 
 	audio,
 	canvas,
 	progress,
 	video {
-		display: inline-block;
-		vertical-align: baseline;
+		& when (@lui_css_reset_html5_elements_fallback = true){
+			display: inline-block;
+			vertical-align: baseline;
+		}
 	}
 
 	// DEFAULT HYPERLINKS
-	a {
+	a when (@lui_css_reset_hyperlink = true){
 		color: inherit;
 
 		&:focus {
@@ -62,45 +75,88 @@
 		}
 
 		img {
+			// SOME STUPID BROWSER MAY ADD BORDER WITHOUT THIS
 			border: 0;
 		}
 	}
 
 	// NO SCROLLBAR IN IE/EDGE
-	textarea {
+	textarea when (@lui_css_reset_textarea_msfix = true){
 		overflow: auto;
 	}
 
 	// PLACEHOLDER COLORFIX
 	input::placeholder {
-		color: inherit !important;
+		& when (@lui_css_reset_placeholder = true){
+			color: @lui_css_reset_placeholder_color !important;
+		}
 	}
 
 	input::-moz-placeholder {
-		color: inherit !important;
+		& when (@lui_css_reset_placeholder = true){
+			color: @lui_css_reset_placeholder_color !important;
+		}
 	}
 
 	input:-ms-input-placeholder {
-		color: inherit !important;
+		& when (@lui_css_reset_placeholder = true){
+			color: @lui_css_reset_placeholder_color !important;
+		}
 	}
 
-	input::-webkit-input-placeholder {
-		color: inherit !important;
+	input::-webkit-input-placeholder{
+		& when (@lui_css_reset_placeholder = true){
+			color: @lui_css_reset_placeholder_color !important;
+		}
 	}
 
 	textarea::placeholder {
-		color: inherit !important;
+		& when (@lui_css_reset_placeholder = true){
+			color: @lui_css_reset_placeholder_color !important;
+		}
 	}
 
 	textarea::-moz-placeholder {
-		color: inherit !important;
+		& when (@lui_css_reset_placeholder = true){
+			color: @lui_css_reset_placeholder_color !important;
+		}
 	}
 
 	textarea:-ms-input-placeholder {
-		color: inherit !important;
+		& when (@lui_css_reset_placeholder = true){
+			color: @lui_css_reset_placeholder_color !important;
+		}
 	}
 
 	textarea::-webkit-input-placeholder {
-		color: inherit !important;
+		& when (@lui_css_reset_placeholder = true){
+			color: @lui_css_reset_placeholder_color !important;
+		}
+	}
+
+
+	// Credit with ♥ to http://stackoverflow.com/a/13183558
+	input:focus::-webkit-input-placeholder {
+		& when (@lui_css_reset_placeholder_focus = true){
+			color: @lui_css_reset_placeholder_focus_color !important;
+		}
+	}
+	// Firefox < 19
+	input:focus:-moz-placeholder {
+		& when (@lui_css_reset_placeholder_focus = true){
+			color: @lui_css_reset_placeholder_focus_color !important;
+		}
+	}
+	// Firefox > 19
+	input:focus::-moz-placeholder {
+		& when (@lui_css_reset_placeholder_focus = true){
+			color: @lui_css_reset_placeholder_focus_color !important;
+		}
+	}
+	// IE10
+	input:focus:-ms-input-placeholder {
+		& when (@lui_css_reset_placeholder_focus = true){
+			color: @lui_css_reset_placeholder_focus_color !important;
+		}
 	}
 }
