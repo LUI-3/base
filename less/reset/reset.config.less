@@ -63,3 +63,10 @@
 // COLOR ON FOCUS
 @lui_css_reset_placeholder_focus: true;
 @lui_css_reset_placeholder_focus_color: #c7c7c7;
+
+
+// DEBUG MODE - CONFIG VALUES
+.lui_config_values when (@lui_debug = true){
+	--lui_reset_config: "LUI-3_base/less/reset/reset.config.less";
+	--lui_css_reset: @lui_css_reset;
+}

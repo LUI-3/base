@@ -11,7 +11,7 @@
 
 // DEBUG - COMPONENT LOAD INFO
 .lui_modules_loaded when (@lui_debug = true){
-	lui_base: true;
+	--lui_base: true;
 }
 
 
@@ -83,4 +83,5 @@
 // DEBUG MODE - LOADED COMPONENTS
 html when (@lui_debug = true) {
 	.lui_modules_loaded;
+	.lui_config_values;
 }

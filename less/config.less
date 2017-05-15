@@ -27,10 +27,17 @@
 @lui_responsive: true;
 
 
-
-
 // BASIC COLORS
 @color_positive:	#45bd0a;
 @color_negative:	#e60d0d;
 @color_warning:		#ee8e04;
 @color_notice:		#34aaed;
+
+
+// DEBUG MODE - CONFIG VALUES
+.lui_config_values when (@lui_debug = true){
+	--lui_base_config: "LUI-3_base/less/config.less";
+	--lui_responsive: @lui_responsive;
+	--lui_debug: @lui_debug;
+	--lui_class_prefix: @lui_class_prefix;
+}
