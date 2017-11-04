@@ -44,9 +44,6 @@
 @import "reset/reset.config.less";
 @import "reset/reset.less";
 
-// COMMON
-@import "common/display.less";
-
 // GRID
 @import "grid/grid.router.less";
 
@@ -88,3 +85,7 @@ html when (@lui_debug = true) {
 	.lui_modules_loaded;
 	.lui_config_values;
 }
+
+
+// COMMON
+@import "common/display.less"; // MUST BE AT END, OTHERWISE IT WON'T OVERWRITE DEFAULT STYLES FOR SOME COMPONENTS
