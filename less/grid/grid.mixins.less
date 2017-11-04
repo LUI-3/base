@@ -15,39 +15,74 @@
 			padding-left: @padding;
 			padding-right: @padding;
 
+
+			&:before when (@lui_debug = true){
+				display: block;
+				font-family: Arial,Helvetica,sans-serif;
+				font-size: 11px;
+				font-weight: bold;
+				color: red;
+				content: "XS Breakpoint";
+			}
+
+
 			& when (@grid_sm_enable = true){
 				@media (min-width:@grid_sm_start){
 					width: @lui_container_sm_width;
+
+					&:before when (@lui_debug = true){
+						content: "SM Breakpoint";
+					}
 				}
 			}
 
 			& when (@grid_md_enable = true){
 				@media (min-width:@grid_md_start){
 					width: @lui_container_md_width;
+
+					&:before when (@lui_debug = true){
+						content: "MD Breakpoint";
+					}
 				}
 			}
 
 			& when (@grid_lg_enable = true){
 				@media (min-width:@grid_lg_start){
 					width: @lui_container_lg_width;
+
+					&:before when (@lui_debug = true){
+						content: "LG Breakpoint";
+					}
 				}
 			}
 
 			& when (@grid_xl_enable = true){
 				@media (min-width:@grid_xl_start){
 					width: @lui_container_xl_width;
+
+					&:before when (@lui_debug = true){
+						content: "XL Breakpoint";
+					}
 				}
 			}
 
 			& when (@grid_xxl_enable = true){
 				@media (min-width:@grid_xxl_start){
 					width: @lui_container_xxl_width;
+
+					&:before when (@lui_debug = true){
+						content: "XXL Breakpoint";
+					}
 				}
 			}
 
 			& when (@grid_xxxl_enable = true){
 				@media (min-width:@grid_xxxl_start){
 					width: @lui_container_xxxl_width;
+
+					&:before when (@lui_debug = true){
+						content: "XXXL Breakpoint";
+					}
 				}
 			}
 		}
