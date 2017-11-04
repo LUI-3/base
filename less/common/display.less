@@ -1,0 +1,182 @@
+//
+// LUI-3 - DISPLAY CLASSNAMES
+//
+
+
+.hidden,
+.xs-hidden {
+	display: none;
+}
+
+.block,
+.xs-block {
+	display: block;
+}
+
+.inline,
+.inline-block,
+.xs-inline,
+.xs-inline-block {
+	display: inline-block;
+}
+
+.flex,
+.xs-flex {
+	.lui.flexbox.block();
+}
+
+.inline-flex,
+.xs-inline-flex {
+	.lui.flexbox.inline();
+}
+
+& when (@grid_sm_enable = true){
+	@media (min-width: @grid_sm_start){
+		.sm-hidden {
+			display: none;
+		}
+
+		.sm-block {
+			display: block;
+		}
+
+		.sm-inline,
+		.sm-inline-block {
+			display: inline-block;
+		}
+
+		.sm-flex {
+			.lui.flexbox.block();
+		}
+
+		.sm-inline-flex {
+			.lui.flexbox.inline();
+		}
+	}
+}
+
+
+& when (@grid_md_enable = true){
+	@media (min-width: @grid_md_start){
+		.md-hidden {
+			display: none;
+		}
+
+		.md-block {
+			display: block;
+		}
+
+		.md-inline,
+		.md-inline-block {
+			display: inline-block;
+		}
+
+		.md-flex {
+			.lui.flexbox.block();
+		}
+
+		.md-inline-flex {
+			.lui.flexbox.inline();
+		}
+	}
+}
+
+& when (@grid_lg_enable = true){
+	@media (min-width: @grid_lg_start){
+		.lg-hidden {
+			display: none;
+		}
+
+		.lg-block {
+			display: block;
+		}
+
+		.lg-inline,
+		.lg-inline-block {
+			display: inline-block;
+		}
+
+		.lg-flex {
+			.lui.flexbox.block();
+		}
+
+		.lg-inline-flex {
+			.lui.flexbox.inline();
+		}
+	}
+}
+
+& when (@grid_xl_enable = true){
+	@media (min-width: @grid_xl_start){
+		.xl-hidden {
+			display: none;
+		}
+
+		.xl-block {
+			display: block;
+		}
+
+		.xl-inline,
+		.xl-inline-block {
+			display: inline-block;
+		}
+
+		.xl-flex {
+			.lui.flexbox.block();
+		}
+
+		.xl-inline-flex {
+			.lui.flexbox.inline();
+		}
+	}
+}
+
+& when (@grid_xxl_enable = true){
+	@media (min-width: @grid_xxl_start){
+		.xxl-hidden {
+			display: none;
+		}
+
+		.xxl-block {
+			display: block;
+		}
+
+		.xxl-inline,
+		.xxl-inline-block {
+			display: inline-block;
+		}
+
+		.xxl-flex {
+			.lui.flexbox.block();
+		}
+
+		.xxl-inline-flex {
+			.lui.flexbox.inline();
+		}
+	}
+}
+
+& when (@grid_xxxl_enable = true){
+	@media (min-width: @grid_xxxl_start){
+		.xxxl-hidden {
+			display: none;
+		}
+
+		.xxxl-block {
+			display: block;
+		}
+
+		.xxxl-inline,
+		.xxxl-inline-block {
+			display: inline-block;
+		}
+
+		.xxxl-flex {
+			.lui.flexbox.block();
+		}
+
+		.xxxl-inline-flex {
+			.lui.flexbox.inline();
+		}
+	}
+}
