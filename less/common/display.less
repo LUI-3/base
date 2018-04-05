@@ -30,6 +30,12 @@
 	.lui.flexbox.inline();
 }
 
+
+.table,
+.xs-table {
+	display: table;
+}
+
 & when (@grid_sm_enable = true){
 	@media (min-width: @grid_sm_start){
 		.sm-hidden {
@@ -51,6 +57,10 @@
 
 		.sm-inline-flex {
 			.lui.flexbox.inline();
+		}
+
+		.sm-table {
+			display: table;
 		}
 	}
 }
@@ -78,6 +88,10 @@
 		.md-inline-flex {
 			.lui.flexbox.inline();
 		}
+
+		.md-table {
+			display: table;
+		}
 	}
 }
 
@@ -102,6 +116,10 @@
 
 		.lg-inline-flex {
 			.lui.flexbox.inline();
+		}
+
+		.lg-table {
+			display: table;
 		}
 	}
 }
@@ -128,6 +146,10 @@
 		.xl-inline-flex {
 			.lui.flexbox.inline();
 		}
+
+		.xl-table {
+			display: table;
+		}
 	}
 }
 
@@ -153,6 +175,10 @@
 		.xxl-inline-flex {
 			.lui.flexbox.inline();
 		}
+
+		.xxl-table {
+			display: table;
+		}
 	}
 }
 
@@ -177,6 +203,10 @@
 
 		.xxxl-inline-flex {
 			.lui.flexbox.inline();
+		}
+
+		.xxxl-table {
+			display: table;
 		}
 	}
 }
