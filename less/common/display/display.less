@@ -1,0 +1,249 @@
+//
+// LUI-3 - DISPLAY CLASSNAMES
+//
+
+
+& when (@lui_common_display = true){
+	.hidden,
+	.xs-hidden {
+		& when (@lui_common_display_hidden = true){
+			display: none;
+		}
+	}
+
+	.inline,
+	.xs-inline {
+		& when (@lui_common_display_inline = true){
+			display: inline;
+		}
+	}
+
+	.block,
+	.xs-block {
+		& when (@lui_common_display_block = true){
+			display: block;
+		}
+	}
+
+	.inline-block,
+	.xs-inline-block {
+		& when (@lui_common_display_inline-block = true){
+			display: inline-block;
+		}
+	}
+
+	.flex,
+	.xs-flex {
+		& when (@lui_common_display_flex = true){
+			.lui.flexbox.block();
+		}
+	}
+
+	.inline-flex,
+	.xs-inline-flex {
+		& when (@lui_common_display_inline-flex = true){
+			.lui.flexbox.inline();
+		}
+	}
+
+
+	.table,
+	.xs-table {
+		& when (@lui_common_display_table = true){
+			display: table;
+		}
+	}
+
+	& when (@grid_sm_enable = true){
+		@media (min-width: @grid_sm_start){
+			.sm-hidden when (@lui_common_display_hidden = true){
+				display: none;
+			}
+
+			.sm-inline when (@lui_common_display_inline = true){
+				display: inline;
+			}
+
+			.sm-block when (@lui_common_display_block = true){
+				display: block;
+			}
+
+			.sm-inline-block when (@lui_common_display_inline-block = true){
+				display: inline-block;
+			}
+
+			.sm-flex when (@lui_common_display_flex = true){
+				.lui.flexbox.block();
+			}
+
+			.sm-inline-flex when (@lui_common_display_inline-flex = true){
+				.lui.flexbox.inline();
+			}
+
+			.sm-table when (@lui_common_display_table = true){
+				display: table;
+			}
+		}
+	}
+
+
+	& when (@grid_md_enable = true){
+		@media (min-width: @grid_md_start){
+			.md-hidden when (@lui_common_display_hidden = true){
+				display: none;
+			}
+
+			.md-inline when (@lui_common_display_inline = true){
+				display: inline;
+			}
+
+			.md-block when (@lui_common_display_block = true){
+				display: block;
+			}
+
+			.md-inline-block when (@lui_common_display_inline-block = true){
+				display: inline-block;
+			}
+
+			.md-flex when (@lui_common_display_flex = true){
+				.lui.flexbox.block();
+			}
+
+			.md-inline-flex when (@lui_common_display_inline-flex = true){
+				.lui.flexbox.inline();
+			}
+
+			.md-table when (@lui_common_display_table = true){
+				display: table;
+			}
+		}
+	}
+
+	& when (@grid_lg_enable = true){
+		@media (min-width: @grid_lg_start){
+			.lg-hidden when (@lui_common_display_hidden = true){
+				display: none;
+			}
+
+			.lg-inline when (@lui_common_display_inline = true){
+				display: inline;
+			}
+
+			.lg-block when (@lui_common_display_block = true){
+				display: block;
+			}
+
+			.lg-inline-block when (@lui_common_display_inline-block = true){
+				display: inline-block;
+			}
+
+			.lg-flex when (@lui_common_display_flex = true){
+				.lui.flexbox.block();
+			}
+
+			.lg-inline-flex when (@lui_common_display_inline-flex = true){
+				.lui.flexbox.inline();
+			}
+
+			.lg-table when (@lui_common_display_table = true){
+				display: table;
+			}
+		}
+	}
+
+	& when (@grid_xl_enable = true){
+		@media (min-width: @grid_xl_start){
+			.xl-hidden when (@lui_common_display_hidden = true){
+				display: none;
+			}
+
+			.xl-inline when (@lui_common_display_inline = true){
+				display: inline;
+			}
+
+			.xl-block when (@lui_common_display_block = true){
+				display: block;
+			}
+
+			.xl-inline-block when (@lui_common_display_inline-block = true){
+				display: inline-block;
+			}
+
+			.xl-flex when (@lui_common_display_flex = true){
+				.lui.flexbox.block();
+			}
+
+			.xl-inline-flex when (@lui_common_display_inline-flex = true){
+				.lui.flexbox.inline();
+			}
+
+			.xl-table when (@lui_common_display_table = true){
+				display: table;
+			}
+		}
+	}
+
+	& when (@grid_xxl_enable = true){
+		@media (min-width: @grid_xxl_start){
+			.xxl-hidden when (@lui_common_display_hidden = true){
+				display: none;
+			}
+
+			.xxl-inline when (@lui_common_display_inline = true){
+				display: inline;
+			}
+
+			.xxl-block when (@lui_common_display_block = true){
+				display: block;
+			}
+
+			.xxl-inline-block when (@lui_common_display_inline-block = true){
+				display: inline-block;
+			}
+
+			.xxl-flex when (@lui_common_display_flex = true){
+				.lui.flexbox.block();
+			}
+
+			.xxl-inline-flex when (@lui_common_display_inline-flex = true){
+				.lui.flexbox.inline();
+			}
+
+			.xxl-table when (@lui_common_display_table = true){
+				display: table;
+			}
+		}
+	}
+
+	& when (@grid_xxxl_enable = true){
+		@media (min-width: @grid_xxxl_start){
+			.xxxl-hidden when (@lui_common_display_hidden = true){
+				display: none;
+			}
+
+			.xxxl-inline when (@lui_common_display_inline = true){
+				display: inline;
+			}
+
+			.xxxl-block when (@lui_common_display_block = true){
+				display: block;
+			}
+
+			.xxxl-inline-block when (@lui_common_display_inline-block = true){
+				display: inline-block;
+			}
+
+			.xxxl-flex when (@lui_common_display_flex = true){
+				.lui.flexbox.block();
+			}
+
+			.xxxl-inline-flex when (@lui_common_display_inline-flex = true){
+				.lui.flexbox.inline();
+			}
+
+			.xxxl-table when (@lui_common_display_table = true){
+				display: table;
+			}
+		}
+	}
+}
