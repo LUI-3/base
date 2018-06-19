@@ -54,6 +54,13 @@
 		}
 	}
 
+	.table-cell,
+	.xs-table-cell {
+		& when (@lui_common_display_table_cell = true){
+			display: table-cell;
+		}
+	}
+
 	& when (@grid_sm_enable = true){
 		@media (min-width: @grid_sm_start){
 			.sm-hidden when (@lui_common_display_hidden = true){
@@ -82,6 +89,10 @@
 
 			.sm-table when (@lui_common_display_table = true){
 				display: table;
+			}
+
+			.sm-table-cell when (@lui_common_display_table_cell = true){
+				display: table-cell;
 			}
 		}
 	}
@@ -116,6 +127,10 @@
 			.md-table when (@lui_common_display_table = true){
 				display: table;
 			}
+
+			.md-table-cell when (@lui_common_display_table_cell = true){
+				display: table-cell;
+			}
 		}
 	}
 
@@ -147,6 +162,10 @@
 
 			.lg-table when (@lui_common_display_table = true){
 				display: table;
+			}
+
+			.lg-table-cell when (@lui_common_display_table_cell = true){
+				display: table-cell;
 			}
 		}
 	}
@@ -180,6 +199,10 @@
 			.xl-table when (@lui_common_display_table = true){
 				display: table;
 			}
+
+			.xl-table-cell when (@lui_common_display_table_cell = true){
+				display: table-cell;
+			}
 		}
 	}
 
@@ -212,6 +235,10 @@
 			.xxl-table when (@lui_common_display_table = true){
 				display: table;
 			}
+
+			.xxl-table-cell when (@lui_common_display_table_cell = true){
+				display: table-cell;
+			}
 		}
 	}
 
@@ -243,6 +270,10 @@
 
 			.xxxl-table when (@lui_common_display_table = true){
 				display: table;
+			}
+
+			.xxxl-table-cell when (@lui_common_display_table_cell = true){
+				display: table-cell;
 			}
 		}
 	}
